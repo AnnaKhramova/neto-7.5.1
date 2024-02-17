@@ -30,11 +30,9 @@ public class PhoneBookTest {
         Assertions.assertEquals("+9 999 555 36 36", result);
     }
 
-    private final PrintStream standardOut = System.out;
-    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-
     @Test
     public void printAllNamesText() {
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStreamCaptor));
         PhoneBook book = new PhoneBook();
         book.add("Виталик", "+9 999 555 36 36");
