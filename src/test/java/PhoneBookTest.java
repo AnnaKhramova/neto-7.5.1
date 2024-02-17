@@ -20,4 +20,14 @@ public class PhoneBookTest {
         //В обычном проекте, не maven, все нормально работает
         Assertions.assertEquals(name, result);
     }
+
+    @Test
+    public void findByNameTest() {
+        PhoneBook book = new PhoneBook();
+        String number = "+9 999 555 36 36";
+        book.add("Виталик", number);
+        book.add("Ася", "+9 999 555 84 84");
+        String result = book.findByName("Виталик");
+        Assertions.assertEquals(number, result);
+    }
 }
