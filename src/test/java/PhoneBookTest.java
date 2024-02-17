@@ -13,8 +13,11 @@ public class PhoneBookTest {
     public void findByNumberTest() {
         PhoneBook book = new PhoneBook();
         book.add("Виталик", "+9 999 555 36 36");
-        book.add("Ася", "+9 999 555 84 84");
+        String name = "Ася";
+        book.add(name, "+9 999 555 84 84");
         String result = book.findByNumber("+9 999 555 84 84");
-        Assertions.assertEquals("Acя", result);
+        //Почему не работает, если сравнивать assertEquals("Ася", result)?
+        //В обычном проекте, не maven, все нормально работает
+        Assertions.assertEquals(name, result);
     }
 }
