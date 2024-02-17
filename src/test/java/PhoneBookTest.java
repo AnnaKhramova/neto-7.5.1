@@ -40,6 +40,6 @@ public class PhoneBookTest {
         book.add("Виталик", "+9 999 555 36 36");
         book.add("Ася", "+9 999 555 84 84");
         book.printAllNames();
-        Assertions.assertEquals("Виталик\nАся", outputStreamCaptor.toString().trim());
+        Assertions.assertEquals("Ася\nВиталик", outputStreamCaptor.toString().trim());
     }
 }
