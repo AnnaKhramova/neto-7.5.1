@@ -26,4 +26,7 @@ public class PhoneBook {
                 .findFirst();
         return result.orElse(null);
     }
+
+    public void printAllNames() {
+    }
 }
